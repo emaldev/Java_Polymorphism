@@ -1,13 +1,24 @@
-public class Main {
-    
-    public static void main(String[] args){
-        System.out.println("Program Strted ");
-        Employee empoyee = new Employee("Emal Hasanzada", 2390.45);
-        Employee manager = new Manager("Mohammad" , 234.235);
-        Employee intern = new Intern("Ali " , 456.34);
+abstract class Animal{
+    public abstract void animalSound();
 
-        empoyee.displayInfo();
-        manager.displayInfo();
-        intern.displayInfo();
+    public void Sleep(){
+        System.out.println("Zzz...");
+    }
+}
+
+class Cat extends Animal{
+    @Override 
+    public void animalSound(){
+        System.out.println("The cat sound is : mow mow mow ");
+    }
+
+    
+}
+public class Main {
+    public static void main(String[] args){
+        
+         Cat mycat = new Cat();
+         mycat.animalSound();
+      
     }
 }
